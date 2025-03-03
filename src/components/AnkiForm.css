@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+.anki-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.anki-form {
+  background-color: #fff;
+  border-radius: var(--radius-l);
+  padding: 20px;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-primary-light);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--stroke-light);
+  border-radius: var(--radius-s);
+  font-size: 16px;
+  transition: border-color var(--transition-time) var(--transition-ease);
+  box-sizing: border-box;
+  max-width: 100%;
+  resize: vertical;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--blue-light);
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.1);
+}
+
+.form-text {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-quaternary-light);
+}
+
+.submit-button {
+  background-color: var(--blue-light);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-button);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-time) var(--transition-ease);
+}
+
+.submit-button:hover {
+  background-color: var(--blue-dark);
+}
+
+.submit-button:disabled {
+  background-color: var(--fill-30-light);
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: rgba(255, 51, 51, 0.1);
+  color: #f33;
+  padding: 12px;
+  border-radius: var(--radius-s);
+  margin-top: 20px;
+}
+
+.result-container {
+  background-color: #fff;
+  border-radius: var(--radius-l);
+  padding: 20px;
+  box-shadow: var(--shadow-light);
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.result-content {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: var(--fill-05-light);
+  border-radius: var(--radius-s);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.transcription-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: rgba(0, 119, 255, 0.05);
+  border-radius: var(--radius-s);
+  border-left: 4px solid var(--blue-light);
+  overflow: hidden;
+}
+
+.transcription-comparison {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.transcription-comparison div {
+  padding: 8px;
+  background-color: var(--fill-05-light);
+  border-radius: var(--radius-s);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.prompt-container {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--stroke-light);
+}
+
+.prompt-content {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  padding: 16px;
+  background-color: var(--fill-05-light);
+  border-radius: var(--radius-s);
+  font-family: monospace;
+  overflow-x: auto;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  .anki-form {
+    background-color: #222223;
+    box-shadow: var(--shadow-dark);
+  }
+  
+  .form-group label {
+    color: var(--text-primary-dark);
+  }
+  
+  .form-control {
+    background-color: #161617;
+    border-color: var(--stroke-dark);
+    color: var(--text-primary-dark);
+  }
+  
+  .form-text {
+    color: var(--text-quaternary-dark);
+  }
+  
+  .submit-button {
+    background-color: var(--blue-dark);
+  }
+  
+  .submit-button:hover {
+    background-color: var(--blue-light);
+  }
+  
+  .submit-button:disabled {
+    background-color: var(--fill-30-dark);
+  }
+  
+  .error-message {
+    background-color: rgba(251, 92, 86, 0.1);
+    color: #fb5c56;
+  }
+  
+  .result-container {
+    background-color: #222223;
+    box-shadow: var(--shadow-dark);
+  }
+  
+  .result-content, .prompt-content {
+    background-color: var(--fill-05-dark);
+  }
+  
+  .transcription-info {
+    background-color: rgba(86, 168, 252, 0.05);
+    border-left: 4px solid var(--blue-dark);
+  }
+  
+  .transcription-comparison div {
+    background-color: var(--fill-05-dark);
+  }
+} 
