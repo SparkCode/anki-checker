@@ -2,6 +2,10 @@
 
 A React application that helps you verify your answers to Anki flashcards using Claude 3.7 Sonnet through OpenRouter API.
 
+## Live Demo
+
+**Try it now:** [https://sparkcode.github.io/anki-checker](https://sparkcode.github.io/anki-checker)
+
 ## Features
 
 - Input your Anki card question and your answer
@@ -31,6 +35,19 @@ npm start
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Deployment
+
+The application is deployed on GitHub Pages. To deploy your own version:
+
+1. Update the `homepage` field in `package.json` to match your GitHub Pages URL
+2. Run the deployment command:
+
+```bash
+npm run deploy
+```
+
+This will build the application and publish it to the `gh-pages` branch of your repository.
 
 ## How to Use
 

@@ -1,6 +1,7 @@
 {
   "name": "anki-checker",
   "version": "0.1.0",
+  "description": "A React application that helps verify your answers to Anki flashcards using Claude 3.7 Sonnet through OpenRouter API",
   "private": true,
   "homepage": "https://sparkcode.github.io/anki-checker",
   "dependencies": {
