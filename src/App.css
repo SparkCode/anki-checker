@@ -41,6 +41,7 @@ body {
   padding: 20px;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .App-header h1 {
@@ -52,6 +53,24 @@ body {
   margin: 10px 0 0;
   font-size: 16px;
   opacity: 0.8;
+}
+
+.settings-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: var(--radius-s);
+  transition: background-color var(--transition-time) var(--transition-ease);
+}
+
+.settings-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 main {
@@ -76,6 +95,94 @@ main {
   text-decoration: underline;
 }
 
+.api-key-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+.api-key-modal-content {
+  background-color: white;
+  padding: 24px;
+  border-radius: var(--radius-l);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow-light);
+  text-align: center;
+}
+
+.api-key-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--stroke-light);
+  border-radius: var(--radius-s);
+  margin: 16px 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.api-key-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.api-key-buttons button {
+  padding: 10px 20px;
+  border-radius: var(--radius-button);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all var(--transition-time) var(--transition-ease);
+}
+
+.api-key-buttons button:first-child {
+  background-color: var(--blue-light);
+  color: white;
+}
+
+.api-key-buttons button:first-child:hover:not(:disabled) {
+  background-color: #0066CC;
+}
+
+.api-key-buttons button:first-child:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.api-key-buttons button:last-child {
+  background-color: var(--fill-05-light);
+  color: var(--text-primary-light);
+}
+
+.api-key-buttons button:last-child:hover {
+  background-color: var(--fill-30-light);
+}
+
+.api-key-help {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-quaternary-light);
+}
+
+.api-key-help a {
+  color: var(--blue-light);
+  text-decoration: none;
+}
+
+.api-key-help a:hover {
+  text-decoration: underline;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #161617;
@@ -92,6 +199,43 @@ main {
   }
   
   .App-footer a {
+    color: var(--blue-dark);
+  }
+  
+  .api-key-modal-content {
+    background-color: #222223;
+    color: var(--text-primary-dark);
+    box-shadow: var(--shadow-dark);
+  }
+  
+  .api-key-input {
+    background-color: #161617;
+    border: 1px solid var(--stroke-dark);
+    color: var(--text-primary-dark);
+  }
+  
+  .api-key-buttons button:first-child {
+    background-color: var(--blue-dark);
+  }
+  
+  .api-key-buttons button:first-child:hover:not(:disabled) {
+    background-color: #4590d9;
+  }
+  
+  .api-key-buttons button:last-child {
+    background-color: var(--fill-05-dark);
+    color: var(--text-primary-dark);
+  }
+  
+  .api-key-buttons button:last-child:hover {
+    background-color: var(--fill-30-dark);
+  }
+  
+  .api-key-help {
+    color: var(--text-quaternary-dark);
+  }
+  
+  .api-key-help a {
     color: var(--blue-dark);
   }
 }

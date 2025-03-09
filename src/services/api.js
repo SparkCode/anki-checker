@@ -5,14 +5,14 @@ import { removePhoneticTranscriptions } from '../utils/transcriptionUtils';
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
 const checkAnswer = async (question, userAnswer) => {
-  // Check for both environment variable formats
-  const apiKey = process.env.REACT_APP_OPENROUTER_API_KEY;
+  // Get API key from localStorage instead of environment variables
+  const apiKey = localStorage.getItem('OPENROUTER_API_KEY');
   
-  // Debug: Log environment variable status (don't log the actual key in production)
+  // Debug: Log API key status (don't log the actual key in production)
   console.log('API Key available:', !!apiKey);
   
   if (!apiKey) {
-    throw new Error('OpenRouter API key is not set. Please set the REACT_APP_OPENROUTER_API_KEY in your .env file.');
+    throw new Error('OpenRouter API key is not set. Please enter your API key in the settings.');
   }
 
   // Remove phonetic transcriptions from the question

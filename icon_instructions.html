@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anki Checker Icon Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #4B7BEC;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anki Checker Icon Installation Instructions</h1>
+    
+    <div class="icon-container">
+        <img src="public/anki_icon.svg" alt="Anki Checker Icon" width="200" height="200">
+    </div>
+    
+    <p>We've created an SVG icon for your Anki Checker application and updated the page title and manifest information.</p>
+    
+    <h2>Manual Steps to Complete the Icon Installation</h2>
+    
+    <ol>
+        <li>
+            <strong>Generate favicon.ico:</strong>
+            <ul>
+                <li>Visit an online converter like <a href="https://convertio.co/svg-ico/" target="_blank">Convertio</a> or <a href="https://www.favicon-generator.org/" target="_blank">Favicon Generator</a></li>
+                <li>Upload the <code>public/anki_icon.svg</code> file</li>
+                <li>Download the ICO file and save it as <code>public/favicon.ico</code>, replacing the existing file</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Generate PNG versions:</strong>
+            <ul>
+                <li>Use an online converter like <a href="https://svgtopng.com/" target="_blank">SVG to PNG</a></li>
+                <li>Upload the <code>public/anki_icon.svg</code> file</li>
+                <li>Create a 192x192 version and save it as <code>public/logo192.png</code></li>
+                <li>Create a 512x512 version and save it as <code>public/logo512.png</code></li>
+            </ul>
+        </li>
+        <li>
+            <strong>Rebuild your application:</strong>
+            <ul>
+                <li>Run <code>npm run build</code> to generate a new build with the updated icons and title</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>What's Already Been Done</h2>
+    <ul>
+        <li>Updated the page title to "Anki Checker" in <code>public/index.html</code></li>
+        <li>Updated the application name in <code>public/manifest.json</code></li>
+        <li>Created an SVG icon in <code>public/anki_icon.svg</code></li>
+    </ul>
+
+    <p><strong>Note:</strong> For the best results, you should replace all three icon files (favicon.ico, logo192.png, and logo512.png) to ensure consistency across different platforms and contexts.</p>
+</body>
+</html>

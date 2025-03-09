@@ -153,6 +153,31 @@
   word-wrap: break-word;
 }
 
+.continue-chat-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.continue-chat-button {
+  display: inline-block;
+  background-color: #fc0;
+  color: #000;
+  border: none;
+  border-radius: var(--depot-radius-button, 12px);
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.continue-chat-button:hover {
+  background-color: #fdde55;
+}
+
 @media (prefers-color-scheme: dark) {
   .anki-form {
     background-color: #222223;
@@ -206,5 +231,14 @@
   
   .transcription-comparison div {
     background-color: var(--fill-05-dark);
+  }
+  
+  .continue-chat-button {
+    background-color: #fdde55;
+    color: #000;
+  }
+  
+  .continue-chat-button:hover {
+    background-color: #f0d251;
   }
 } 

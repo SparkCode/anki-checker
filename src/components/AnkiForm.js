@@ -31,6 +31,15 @@ const AnkiForm = () => {
     }
   };
 
+  const buildChatUrl = () => {
+    // Create a message with the question, answer, and result
+    const chatMessage = `Question: ${cleanedQuestion || question}\nMy answer: ${userAnswer}\nEvaluation: ${result}`;
+    // Encode the message for safe URL transmission
+    const encodedMessage = encodeURIComponent(chatMessage);
+    // Return URL with the message as a query parameter
+    return `https://openrouter.ai/chat?message=${encodedMessage}`;
+  };
+
   return (
     <div className="anki-form-container">
       <form onSubmit={handleSubmit} className="anki-form">
@@ -93,6 +102,17 @@ const AnkiForm = () => {
           <div className="prompt-container">
             <h4>Prompt Sent to Model:</h4>
             <pre className="prompt-content">{prompt}</pre>
+          </div>
+          
+          <div className="continue-chat-container">
+            <a 
+              href={buildChatUrl()} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="continue-chat-button"
+            >
+              Continue in Chat
+            </a>
           </div>
         </div>
       )}
