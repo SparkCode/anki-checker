@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/anki-checker/static/css/main.b5b1ced5.css",
+    "main.js": "/anki-checker/static/js/main.59b0bd51.js",
+    "static/js/453.6a428889.chunk.js": "/anki-checker/static/js/453.6a428889.chunk.js",
+    "index.html": "/anki-checker/index.html",
+    "main.b5b1ced5.css.map": "/anki-checker/static/css/main.b5b1ced5.css.map",
+    "main.59b0bd51.js.map": "/anki-checker/static/js/main.59b0bd51.js.map",
+    "453.6a428889.chunk.js.map": "/anki-checker/static/js/453.6a428889.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5b1ced5.css",
+    "static/js/main.59b0bd51.js"
+  ]
+}
