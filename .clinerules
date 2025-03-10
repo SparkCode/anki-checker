@@ -1,0 +1,33 @@
+# Anki Checker Project Rules
+
+## Coding Standards
+- React functional component pattern preferred over class components
+- CSS files are paired with component files (same name)
+- Tests follow the naming pattern of `*.test.js`
+- Use of axios for API requests
+- ES6+ JavaScript features are used throughout the codebase
+
+## Project Structure
+- Components are stored in `/src/components/`
+- Services (API, etc.) are in `/src/services/`
+- Utility functions are in `/src/utils/`
+- Test mocks are in `/src/__mocks__/`
+- Public assets are in `/public/`
+
+## Development Workflow
+- Standard Create React App commands:
+  - `npm start` - Run development server
+  - `npm test` - Run tests
+  - `npm run build` - Create production build
+
+## Key Features
+- AnkiForm component for user input
+- API integration for backend processing
+- Transcription utilities for specialized text handling
+
+## Design Patterns
+- Component-based architecture
+- Service layer for API communication
+- Utility modules for shared functionality
+
+This rules file will be updated as we discover more project-specific patterns and preferences during development.

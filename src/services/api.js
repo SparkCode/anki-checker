@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { removePhoneticTranscriptions } from '../utils/transcriptionUtils';
 
-// OpenRouter API for Claude 3.7 Sonnet
+// OpenRouter API for ChatGPT-4o
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
 const checkAnswer = async (question, userAnswer) => {
@@ -35,7 +35,7 @@ Please evaluate my answer and tell me if it's correct. If not, explain why and p
     const response = await axios.post(
       API_URL,
       {
-        model: 'anthropic/claude-3-sonnet-20240229',
+        model: 'openai/gpt-4o',
         messages: [
           {
             role: 'user',
@@ -65,4 +65,4 @@ Please evaluate my answer and tell me if it's correct. If not, explain why and p
   }
 };
 
-export { checkAnswer }; 
+export { checkAnswer };
