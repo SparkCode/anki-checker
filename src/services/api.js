@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { removePhoneticTranscriptions } from '../utils/transcriptionUtils';
 
-// OpenRouter API for ChatGPT-4o
+// OpenRouter API for Google Gemini 2.0 Flash
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
 const checkAnswer = async (question, userAnswer) => {
@@ -35,7 +35,7 @@ Please evaluate my answer and tell me if it's correct. If not, explain why and p
     const response = await axios.post(
       API_URL,
       {
-        model: 'openai/gpt-4o',
+        model: 'google/gemini-2.0-flash-001',
         messages: [
           {
             role: 'user',
